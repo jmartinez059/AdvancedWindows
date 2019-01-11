@@ -1,0 +1,8 @@
+export class Person {
+    id: number;
+    uName: string;
+    pWord: string;
+    fName: string;
+    lName: string;
+    eMail: string;
+}
