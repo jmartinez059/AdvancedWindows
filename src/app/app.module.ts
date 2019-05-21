@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FrontPageComponent } from './components/front-page/front-page.component';
+import { AWWRoutingModule } from './modules/router/router.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { FrontPageComponent } from './components/front-page/front-page.component
     FrontPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AWWRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
