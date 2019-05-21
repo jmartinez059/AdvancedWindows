@@ -1,0 +1,7 @@
+
+ssquid:S2094"BRemove this empty class, write its code or make it an "interface".(ø˜¢ñþÿÿÿÿHRMINORZ
+CODE_SMELL
+gsquid:S1610"6Convert the abstract class "Person" into an interface.(ø˜¢ñþÿÿÿÿHRMINORZ
+CODE_SMELL
+‡squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÇÃÙÕHRMINORZ
+CODE_SMELL
