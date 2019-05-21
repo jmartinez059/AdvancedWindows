@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ServiceDropdownComponent } from 'src/app/components/service-dropdown/service-dropdown.component';
+import { AppComponent } from 'src/app/app.component';
 
 const routes: Routes = [
-  { path: 'service/services', component: ServiceDropdownComponent}
+  // { path: 'service/services', component: ServiceDropdownComponent}
 ];
 
 @NgModule({
