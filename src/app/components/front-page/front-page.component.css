@@ -16,6 +16,7 @@ div {
 }
 
 .front-page {
+    margin-top: 125px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,4 +32,8 @@ ul {
 li {
     font-weight: bold;
     font-size: 24px;
+}
+
+#nav-bar-comp {
+    margin-bottom: 5px;
 }

@@ -1,20 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FrontPageComponent } from './components/front-page/front-page.component';
-import { AWWRoutingModule } from './modules/router/router.module';
+import { AppRoutingModule } from './app-routing.module';
+import { ServiceDropdownComponent } from './components/service-dropdown/service-dropdown.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    ServiceDropdownComponent,
+    AppointmentComponent,
+    ContactComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
-    AWWRoutingModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
