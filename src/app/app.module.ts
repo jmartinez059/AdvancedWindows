@@ -11,8 +11,11 @@ import { AboutComponent } from './components/about/about.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ServiceInfoModalComponent } from './components/modal/service-info-modal/service-info-modal.component';
 import { MatDialogModule, MatInputModule, MatButtonModule, MatFormFieldModule, MAT_DIALOG_DATA } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    FormsModule,
     MaterialModule,
     BrowserAnimationsModule
   ],
