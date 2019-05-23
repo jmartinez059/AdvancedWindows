@@ -21,6 +21,7 @@ div {
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    opacity: 1;
 }
 
 ul {
