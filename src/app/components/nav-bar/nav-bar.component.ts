@@ -39,6 +39,8 @@ export class NavBarComponent implements OnInit {
   public login() {
     // TODO - make this do login stuff login -> user name / logout
     console.log('login() called\nTODO - do login stuff');
+    // check db for credentials
+    // show user name and logout option
   }
 
 }
