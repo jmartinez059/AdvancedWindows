@@ -1,0 +1,44 @@
+#service-div {
+    padding: 125px 30px 30px 30px;
+}
+
+#service-heading {
+    font-size: 45px;
+    font-weight: 900;
+    margin: 0px;
+}
+
+#service-body-info {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+#services-list {
+    margin: 0px 30px 0px 30px;
+    text-align-last: center;
+}
+
+#list-div-1 {
+    font-size: 25px;
+    font-weight: 900;
+    width: 50%;
+    float: right;
+    display: inline;
+    list-style-type: none;
+}
+
+#list-div-2 {
+    font-size: 25px;
+    font-weight: 900;
+    width: 50%;
+    float: left;
+    display: inline;
+    list-style-type: none;
+}
+
+#services-list-heading {
+    margin: 0px 30px 0px 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;    
+}

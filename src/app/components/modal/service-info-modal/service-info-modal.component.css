@@ -1,0 +1,33 @@
+#service-modal {
+    padding: 50px;
+    box-shadow: 15px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 25px;
+    font-weight: 900;
+    align-content: center;
+    width: '750px',
+}
+
+#info-heading-focus {
+    text-decoration: underline;
+    display: inline;
+    width: 40%;
+}
+
+#services-info-heading {  
+    font-size: 25px;
+    font-weight: 900;  
+    align-content: inline;
+    display: inline;
+    width: 25%;
+    margin: 0px;
+}
+
+#services-info-body {  
+    font-size: 25px;
+    font-weight: 900;  
+    align-content: inline;
+    width: 75%;
+    margin: 0px;
+}

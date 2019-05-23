@@ -42,5 +42,4 @@ export class NavBarComponent implements OnInit {
     // check db for credentials
     // show user name and logout option
   }
-
 }
