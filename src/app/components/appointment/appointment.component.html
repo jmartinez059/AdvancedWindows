@@ -1,3 +1,20 @@
-<br><br><br><h1>
+<br><br>
+<br><h1>
   appointment works!
 </h1>
+<p-chips class="p-chip-name" [(ngModel)]="tiles" (onAdd)="addTile($event.value)">
+  <ng-template let-item pTemplate="item">
+    <i class="fa fa-stack-2x"></i>
+    <strong class="fa-stack-1x ng-star">{{item.initials}}</strong>
+    {{item.name}}
+  </ng-template>
+</p-chips>
+
+<p-chips [(ngModel)]="values">
+
+  <span class="fa-stack fa-3x">
+    <i class="fa fa-calendar-o fa-stack-2x"></i>
+    <strong class="fa-stack-1x calendar-text">27</strong>
+  </span>
+
+</p-chips>

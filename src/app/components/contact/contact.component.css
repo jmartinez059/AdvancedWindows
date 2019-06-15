@@ -1,0 +1,185 @@
+/* @import '~ngx-prime-theme/theme/_colors.scss';
+@import '~ngx-prime-theme/theme/_typography.scss'; */
+
+.errorMessage {
+    margin-top: 0px;
+    color: red;
+}
+
+.profile-view {
+	text-decoration: none;
+	margin: 16px;
+	color: black;
+}
+
+.split-body {
+	padding: 30px 20px 20px 20px !important;
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+    overflow-y: auto;
+    height: 74vh;
+	color: grey !important;
+	font-weight: bold;
+}
+
+.split-footer {
+	height: 40px;
+	position: relative;
+	padding-top: 3px;
+	border-top: solid 1px lightgray;
+}
+
+.input-email {
+	margin-bottom: 15px;
+	width: 100%;
+	color: grey !important;
+}
+
+.p-chips-email {
+	width: 100%;
+}
+
+.optional-message-email{
+	text-align: right;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.exit-email {
+	color: grey;
+}
+
+.back-email {
+	font-size: 16px;
+}
+
+.to-email {
+	margin: 5px 5px 10px 5px;
+	width: 100%;
+	color: grey !important;
+}
+
+.recipient-input {
+	width: 100%;
+	margin: 5px;
+}
+
+ .email-body {
+	 padding: 10px;
+	 font-family: "Helvetica Neue LT Pro 55 ROMAN", Helvetica, Arial, Sans-Seri;
+	 font-size: 0.875rem;
+	 color: grey;
+	 -webkit-border-radius: 5px;
+	 -moz-border-radius: 5px;
+	 border-radius: 5px;
+	 resize: none;
+ }
+
+ .cancel-email {
+	 border: 0px !important;
+ }
+
+ .min-width-button {
+	 margin-left: 15px;
+ }
+
+ ::ng-deep .ui-chips-token.ui-state-highlight {
+	 color: black;
+	 background-color: white;
+	 height: 30px;
+	 margin-bottom: 0px;
+	 margin-right: 5px;
+	 padding-left: 0px;
+	 border-width: 1.2px;
+	 border-color: rgb(0, 125, 186);
+	 padding-right: 20px;
+ }
+
+ ::ng-deep .ui-chips-token .ui-chips-token-label {
+	margin-top: 5px;
+	font-family: "Helvetica Neue LT Pro 55 ROMAN", Helvetica, Arial, Sans-Serif;
+	font-size: 15px;
+ }
+
+ ::ng-deep .ui-fluid .ui-inputgroup .ui-inputtext {
+	padding: 4px 10px 4px 10px;
+ }
+
+ ::ng-deep .ui-chips-input-token {
+	margin-top: 5px;
+	font-family: "Helvetica Neue LT Pro 55 ROMAN", Helvetica, Arial, Sans-Serif;
+	font-size: 15px;
+}
+
+::ng-deep .mar-right10 {
+    margin-right: 15px !important;
+    margin-bottom: 10px;
+}
+
+.rounded-circle {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 125, 186);
+    border-radius: 50%;
+    display: inline-block;
+    font-family: "Helvetica Neue LT Pro 45 LIGHT",Helvetica,Arial,Sans-Serif;
+    font-size: .77rem;
+    line-height: 1rem;
+    letter-spacing: .01rem;
+    text-transform: none;
+    padding-top: 6px;
+    color: #fff;
+    text-align: center;
+}
+
+.email-preview-header {
+	padding: .625rem;
+	margin-bottom: .625rem;
+	display: inline;
+}
+
+.email-preview-iframe {
+	width: -webkit-fill-available;
+	margin: auto;
+	min-height: 39.3rem;
+    width: 630px;
+    border-radius: 0px 0px 7px 7px;
+	border-style: none !important;
+	border-image-outset: 0rem;
+    margin-left: 22px;
+	box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.email-preview-footer {
+	margin-top: 0px !important;
+	padding: 1rem;
+	height: 40px;
+}
+
+.preview-icon {
+	margin-top: 0px !important;
+	padding-bottom: .3rem;
+	font-size: 16px;
+}
+
+
+:ng-deep .ui-dialog-titlebar {
+	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+::ng-deep .ui-dialog {
+	top: 10%;
+	height: auto;
+	width: auto;
+}
+
+.email-p-dialog {
+	color: gray !important;
+}
+
+::ng-deep ul.ui-inputtext li.ui-chips-token:first-of-type span.ui-chips-token-icon.pi.pi-fw.pi-times.ng-star-inserted {
+	display: none !important;
+}
+

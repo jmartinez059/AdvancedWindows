@@ -19,6 +19,7 @@
 }
 
 #list-div-1 {
+    text-align: center;
     font-size: 25px;
     font-weight: 900;
     width: 50%;
@@ -28,6 +29,7 @@
 }
 
 #list-div-2 {
+    text-align: center;
     font-size: 25px;
     font-weight: 900;
     width: 50%;
