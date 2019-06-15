@@ -11,9 +11,12 @@ import { AboutComponent } from './components/about/about.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ServiceInfoModalComponent } from './components/modal/service-info-modal/service-info-modal.component';
 import { MatDialogModule, MatInputModule, MatButtonModule, MatFormFieldModule, MAT_DIALOG_DATA } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -37,11 +40,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MessagesModule,
+    MessageModule
   ],
   providers: [
-    {provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true}}
+    {provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true}},
+    MessageService
   ],
   bootstrap: [
     AppComponent
