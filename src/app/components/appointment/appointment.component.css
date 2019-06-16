@@ -6,6 +6,15 @@
     color: red;
 }
 
+:host ::ng-deep .ui-message,
+        :host ::ng-deep .ui-inputtext {
+            margin-right: .25em;
+}
+
+.custom-message-textarea {
+	width: 40rem;
+}
+
 .profile-view {
 	text-decoration: none;
 	margin: 16px;
@@ -116,6 +125,8 @@
     margin-right: 15px !important;
     margin-bottom: 10px;
 }
+
+.form-control.ng-touched.ng-invalid{border:2px solid red;}
 
 .rounded-circle {
     height: 30px;
