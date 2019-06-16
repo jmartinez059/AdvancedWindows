@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
+import { EmployeeService } from './services/employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,11 +46,13 @@ import { MessageService } from 'primeng/api';
     MaterialModule,
     BrowserAnimationsModule,
     MessagesModule,
-    MessageModule
+    MessageModule,
+    HttpClientModule
   ],
   providers: [
     {provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true}},
-    MessageService
+    MessageService,
+    EmployeeService
   ],
   bootstrap: [
     AppComponent

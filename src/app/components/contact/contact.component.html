@@ -1,79 +1,11 @@
 <br>
 <br>
 <br>
-<h1>
-  contact works!
-</h1>
-<p-message
-  *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
-  severity="warn"
-  text="Are you sure?">
-</p-message>  
-  <p-messages *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
-      [(value)]="msgs">
-  </p-messages>
-<div>
-  <p-chips
-    class="p-chips-email"
-    class="ui-g-12"
-    onFocus="onTabIn()"
-    onBlur="onTabOur()"
-    (onAdd)="addRecipient($event.value)"
-    (onRemove)="removeRecipient($event.value)"
-    [allowDuplicate]="false">
-  <ng-template let-item pTemplate="item">
-    <span class="rounded-circle ng-star-inserted">{{getInitials(item)}}</span>
-    {{getChipsContent(item)}}
-  </ng-template>
-  </p-chips>
-
-  <div class="ui-inputgroup recipient-input">
-    <input
-      class="input-email" 
-      [(ngModel)]="subject" 
-      type="text" 
-      pInputText 
-      placeholder="Subject"
-      (onFocus)="onTabIn()"
-      (onBlur)="onTabOur()">
+<div class="about-container">
+  <div class="about-employee-info">
+    <div class="about-owner-name">
+    </div>
+    <div class="contact-owner-description">
+    </div>
   </div>
-
-  <div class=" split-footer">
-    <span class="pull-right mar-right10 mar-top5">
-      <button 
-        pButton 
-        type="button"
-        label="Send"
-        class="ui-button-primary ui-splitbutton-menubutton update-appointment min-width-button"
-        (click)="sendEmail()">
-      </button>
-    </span>
-  </div>
-
-
-  <h3 class="first">
-    Basic
-  </h3>
-  <input
-    id="input"
-    type="text"
-    size="30"
-    pInputText
-    [formControl]="subjectFormControl"
-    [(ngModel)]="subjectFormControl.value"> 
-  <h1>Value: {{subjectFormControl.value}}</h1>
-  <p 
-    class="errorMessage"
-    *ngIf="!subjectFormControl.valid && subjectFormControl.touched">Please add a subject</p>
 </div>
-
-<h3>Float Label</h3>
-<span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
-    <label for="float-input">Username</label>
-</span>
-
-<h3>Disabled</h3>
-<input id="disabled-input" type="text" size="30" pInputText [disabled]="disabled" />
-
-<button id="disabled-btn" type="button" (click)="toggleDisabled()" pButton label="Toggle"></button>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/types/service';
-import { MockServices } from 'src/app/mock-data/mock-data';
+import { MockData } from 'src/app/mock-data/mock-data';
 import { MatDialog } from '@angular/material';
 import { ServiceInfoModalComponent } from '../modal/service-info-modal/service-info-modal.component';
 
@@ -12,7 +12,7 @@ import { ServiceInfoModalComponent } from '../modal/service-info-modal/service-i
 export class ServicesComponent implements OnInit {
 
   public services: Service[];
-  public mockServices = new MockServices();
+  public mockServices = new MockData().services;
 
   constructor(
     public dialog: MatDialog
@@ -23,7 +23,7 @@ export class ServicesComponent implements OnInit {
   }
 
   public getServices() {
-    this.services = this.mockServices.services;
+    this.services = this.mockServices;
     console.log('why');
   }
 

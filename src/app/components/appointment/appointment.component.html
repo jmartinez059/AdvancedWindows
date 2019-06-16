@@ -1,20 +1,97 @@
-<br><br>
-<br><h1>
-  appointment works!
+<br>
+<br>
+<br>
+<h1>
+  contact works!
 </h1>
-<p-chips class="p-chip-name" [(ngModel)]="tiles" (onAdd)="addTile($event.value)">
-  <ng-template let-item pTemplate="item">
-    <i class="fa fa-stack-2x"></i>
-    <strong class="fa-stack-1x ng-star">{{item.initials}}</strong>
-    {{item.name}}
-  </ng-template>
-</p-chips>
+  <p-message
+    *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
+    severity="warn"
+    summary="Empty Subject"
+    text="There is no subject to send with this email">
+  </p-message> 
+  <p-messages *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
+      [(value)]="msgs">
+  </p-messages>
+<div>
+  <p-chips
+    class="p-chips-email"
+    class="ui-g-12"
+    [(ngModel)]="recipients"
+    (onBlur)="onTabOut()"
+    (onRemove)="removeRecipient($event.value)"
+    [allowDuplicate]="false"
+    (onAdd)="createRecipientAndAddToRecipients($event.value)">
+    <ng-template let-item pTemplate="item">
+      <span class="rounded-circle ng-star-inserted">{{getInitials(item)}}</span>
+      {{item.name? item.name : item.email}}
+    </ng-template>
+  </p-chips>
 
-<p-chips [(ngModel)]="values">
+  <div class="ui-inputgroup recipient-input">
+    <input
+      class="input-email" 
+      [(ngModel)]="subject" 
+      type="text" 
+      pInputText 
+      placeholder="Subject">
+  </div>
 
-  <span class="fa-stack fa-3x">
-    <i class="fa fa-calendar-o fa-stack-2x"></i>
-    <strong class="fa-stack-1x calendar-text">27</strong>
-  </span>
+  <div class=" split-footer">
+    <span class="pull-right mar-right10 mar-top5">
+      <button 
+        pButton 
+        type="button"
+        label="Send"
+        class="ui-button-primary ui-splitbutton-menubutton update-appointment min-width-button"
+        (click)="sendEmail()">
+      </button>
+    </span>
+  </div>
 
-</p-chips>
+
+  <h3 class="first">
+    Basic
+  </h3>
+  <input
+    id="input"
+    type="text"
+    size="30"
+    pInputText
+    [formControl]="subjectFormControl"
+    [(ngModel)]="subjectFormControl.value">
+  <div *ngFor="let recipient of recipients">
+    <h1>{{recipient.name}}:{{recipient.email}}</h1><br>
+</div>
+  <p 
+    class="errorMessage"
+    *ngIf="!subjectFormControl.valid && subjectFormControl.touched">Please add a subject</p>
+</div>
+
+<h3>Custome Message</h3>
+<span class="ui-float-label">
+    <textarea
+      id="float-input"
+      type="text"
+      size="230"
+      [rows]="6"
+      [formControl]="emailFormControl"
+      pInputText>    
+      <label class="optional-placeholder pad-bot5" for="type">Message</label>
+      <label class="label-right optional-placeholder align-right">optional</label>
+</span>
+
+<h3>Disabled</h3>
+<input id="disabled-input" type="text" size="30" pInputText [disabled]="disabled" />
+
+<button id="disabled-btn" type="button" (click)="toggleDisabled()" pButton label="Toggle"></button>
+
+
+    <textarea 
+      pInputTextarea      
+      (onBlur)="onTabOutTextarea()"
+      spellcheck="true on"
+      [rows]="6" >
+        <label class="optional-placeholder pad-bot5" for="type">Message</label>
+        <label class="label-right optional-placeholder align-right">optional</label>
+    </textarea>
