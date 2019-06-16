@@ -1,4 +1,5 @@
 .about-container {
+    font-weight: bold;
 }
 
 .about-employee-info {
@@ -9,7 +10,6 @@
 
 .about-employee-card-container {
     border: 10px solid black;
-    border-radius: 5px;
     background-color: #d3d3d366;
     margin: auto;
     width: 75%;
@@ -17,6 +17,9 @@
     padding: 2rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
 
 .about-employee-card {
