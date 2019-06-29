@@ -2,35 +2,30 @@
     display: flex;
 }
 
-.contact-info {
+.contact-info-container {
     border: 10px;
     border-color: black;
     border-radius: 5px;
-    background-color: white;
+    background-color: #0808fa2e;
     width: 47rem;
     height: auto;
     box-shadow: 1px 2px 3px 2px;
     z-index: 500;
     margin-top: 5rem !important;
     margin: auto;
+    padding: 2rem;
 }
 
-.contact-owner-name {
+.contact-company {
     padding: 1rem;
-    font-size: 28px;
+    text-align: center;
 }
 
-.contact-methods {
-    display: block;
-    padding: 1rem;
-    background-color: lightblue;
+.contact-address-phone {
+    font-size: 1.5rem;
 }
 
-.contact-method {
-    display: block;
-    margin: auto;
-}
-
-.contact-button {
-    margin: auto;
+.contact-info {
+    font-size: 2rem;
+    display: inline;
 }

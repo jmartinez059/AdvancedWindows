@@ -2,32 +2,24 @@
 <br>
 <br>
 <div class="contact-container">
-  <div class="contact-info">
-    <div class="contact-owner-name">
-      Feel free to contact me, press the button below to see your ooptions for how to contact me
+  <div class="contact-info-container">
+    <div class="contact-company">
+        <h1>Contact Advanced Window Washing:</h1>
+    </div>
+    <div class="contact-address-phone">
+      <b>Address:   </b>
+      <div class="contact-info">{{companyAddress}}</div>
       <br>
-      Marcus Washington
+      <b>Phone:   </b>
+      <div class="contact-info">{{companyPhoneNumber}}</div>
+      <br>
+      <b>Email:   </b>
+      <div class="contact-info" (click)="openEmailModal()">{{companyEmailAddress}}</div>
     </div>
-    <div class="contact-methods">
-      <div class="contact-method">
-        <button pButton type="button" class="ui-button-rounded contact-button"
-        label="Phone" (click)="navTo('phone')"></button>
-      </div>
-      <div class="contact-method">
-        <button mat-button class="ui-button-rounded contact-button"
-        label="Email" (click)="navTo('email')"></button>
-      </div>
-      <div class="contact-method">
-        <button pButton type="button" class="ui-button-rounded contact-button" label="Letter"></button>
-      </div>
-      <div class="contact-method">
-        <button pButton type="button" class="ui-button-rounded contact-button" label="Carrier Pigeon"></button>
-      </div><div class="contact-method">
-          <button pButton type="button" label="Primary" class="ui-button-rounded"></button>
-        </div>
-      <div class="contact-component-router">
-        <router-outlet name="contact-methods-router"></router-outlet>  
-      </div>
-    </div>
+    
+
+  </div>
+  <div class="contact-by-email">
+    
   </div>
 </div>

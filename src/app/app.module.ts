@@ -20,9 +20,7 @@ import { MessageService } from 'primeng/api';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
-import { PhoneCallComponent } from './components/phone-call/phone-call.component';
-import { EmailComponent } from './components/email/email.component';
-
+import { EmailModalComponent } from './components/modal/email-modal/email-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +33,7 @@ import { EmailComponent } from './components/email/email.component';
     AboutComponent,
     ModalComponent,
     ServiceInfoModalComponent,
-    PhoneCallComponent,
-    EmailComponent
+    EmailModalComponent
   ],
   imports: [
     BrowserModule,

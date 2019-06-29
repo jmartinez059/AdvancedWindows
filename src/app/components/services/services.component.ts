@@ -24,11 +24,9 @@ export class ServicesComponent implements OnInit {
 
   public getServices() {
     this.services = this.mockServices;
-    console.log('why');
   }
 
   public showDescription(service: Service) {
-    console.log('service selected: ', service);
     this.dialog.closeAll();
     const dialogRef = this.dialog.open(ServiceInfoModalComponent, {
       data: { 'name': service.name, 'description': service.description }
