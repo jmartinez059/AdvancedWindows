@@ -2,15 +2,35 @@
     display: flex;
 }
 
-.contact-owner-info {
-    display: inline-block;
+.contact-info {
     border: 10px;
     border-color: black;
     border-radius: 5px;
-    background-color: lightgrey;
-    opacity: .25;
+    background-color: white;
+    width: 47rem;
+    height: auto;
+    box-shadow: 1px 2px 3px 2px;
+    z-index: 500;
+    margin-top: 5rem !important;
+    margin: auto;
 }
 
 .contact-owner-name {
-    font-size: 24px;
+    padding: 1rem;
+    font-size: 28px;
+}
+
+.contact-methods {
+    display: block;
+    padding: 1rem;
+    background-color: lightblue;
+}
+
+.contact-method {
+    display: block;
+    margin: auto;
+}
+
+.contact-button {
+    margin: auto;
 }

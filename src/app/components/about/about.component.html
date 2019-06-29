@@ -3,20 +3,22 @@
 <br>
 <div class="about-container">
   <div class="about-emplyee-info" *ngFor="let employee of employees">
-    <div class="about-employee-card-container">
-      <span class="about-employee-card">
-        <div class="about-employee-position-name-description">
-          <div class="about-employee-name">
-            <p>{{employee.position}}: {{employee.name}}</p>
-          </div>
-          <div class="about-employee-description">
-              {{employee.description}}
-          </div>        
-        </div>
-        <div class="about-employee-image">
-          <img class="about-employee-image-size" src="{{employee.image_url}}">
-        </div>
-      </span>
+    <div class="about-employee-card-border">
+      <div class="about-employee-card-container">
+          <span class="about-employee-card">
+            <div class="about-employee-position-name-description">
+              <div class="about-employee-name">
+                <p>{{employee.position}}: {{employee.name}}</p>
+              </div>
+              <div class="about-employee-description">
+                  {{employee.description}}
+              </div>        
+            </div>
+            <div class="about-employee-image">
+              <img class="about-employee-image-size" src="{{employee.image_url}}">
+            </div>
+          </span>
+      </div>      
     </div>
   </div>
 </div>

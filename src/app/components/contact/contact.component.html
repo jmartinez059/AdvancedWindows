@@ -1,11 +1,33 @@
 <br>
 <br>
 <br>
-<div class="about-container">
-  <div class="about-employee-info">
-    <div class="about-owner-name">
+<div class="contact-container">
+  <div class="contact-info">
+    <div class="contact-owner-name">
+      Feel free to contact me, press the button below to see your ooptions for how to contact me
+      <br>
+      Marcus Washington
     </div>
-    <div class="contact-owner-description">
+    <div class="contact-methods">
+      <div class="contact-method">
+        <button pButton type="button" class="ui-button-rounded contact-button"
+        label="Phone" (click)="navTo('phone')"></button>
+      </div>
+      <div class="contact-method">
+        <button mat-button class="ui-button-rounded contact-button"
+        label="Email" (click)="navTo('email')"></button>
+      </div>
+      <div class="contact-method">
+        <button pButton type="button" class="ui-button-rounded contact-button" label="Letter"></button>
+      </div>
+      <div class="contact-method">
+        <button pButton type="button" class="ui-button-rounded contact-button" label="Carrier Pigeon"></button>
+      </div><div class="contact-method">
+          <button pButton type="button" label="Primary" class="ui-button-rounded"></button>
+        </div>
+      <div class="contact-component-router">
+        <router-outlet name="contact-methods-router"></router-outlet>  
+      </div>
     </div>
   </div>
 </div>

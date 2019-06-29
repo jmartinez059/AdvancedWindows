@@ -19,7 +19,9 @@ import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ButtonModule } from 'primeng/button';
+import { PhoneCallComponent } from './components/phone-call/phone-call.component';
+import { EmailComponent } from './components/email/email.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     AboutComponent,
     ModalComponent,
-    ServiceInfoModalComponent
+    ServiceInfoModalComponent,
+    PhoneCallComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MessagesModule,
     MessageModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule
   ],
   providers: [
     {provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true}},
