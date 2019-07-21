@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontPageComponent implements OnInit {
 
+  private readonly title: string = 'AWW';
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,24 @@
+<div id="service-div">
+    <div>
+      <p id="service-heading">Advanced Windows Provides many services!</p>
+      <p id="service-body-info">From window washing to cleaning out gutters, Award Window Washing is there for you. 
+        We offer a variety of services to help keep your house looking its best! So if your solar panels need 
+        cleaning or the drive way needs to oil stains removed don't hesitate to call!!
+      </p>
+      <div id="serivces-list">
+        <div>
+          <p id="services-list-heading">Services Offered</p>
+        </div>
+        <div id="list-div-1">
+          <div *ngFor="let service of services" (click)="showDescription(service)">
+            <p class="services-list-item" *ngIf="service.id%2 == 1">{{service.name}}</p>
+          </div>
+        </div>
+        <div id="list-div-2">
+          <div *ngFor="let service of services" (click)="showDescription(service)">
+            <p class="services-list-item" *ngIf="service.id%2 == 0">{{service.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

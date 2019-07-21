@@ -1,0 +1,17 @@
+<div id="service-modal">
+  <div class="service-modal-info">
+    <div id="services-info-heading">
+      <p id="info-heading-focus">Service: </p>
+      <p id="services-info-body">{{data.name}}</p>
+    </div>
+    <br>
+    <div mat-dialog-content id="service-info-description">
+      <p id="info-heading-focus">Description:</p>
+        <p id="services-info-body">{{data.description}}</p>
+    </div>
+    <br>
+    <div id="service-modal-close" mat-dialog-actions>
+      <button color="primary" mat-raised-button [mat-dialog-close]="data.story" cdkFocusInitial>Close</button>
+    </div>
+  </div>
+</div>

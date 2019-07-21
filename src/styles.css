@@ -1,7 +1,9 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
-.image{
-    background-size:cover;
-    width:auto;
-    background-image:url('https://drive.google.com/uc?id=1wlDb6lp_ERA4DMY-302_xo5wTvn8AoRR');
-    /*background-position:50% 50%;*/
+.bg {
+    background-size: cover;
+    width: auto;
+    /* background-image: url('https://drive.google.com/uc?id=1wlDb6lp_ERA4DMY-302_xo5wTvn8AoRR'); */
+    background-image: url('./assets/images/waterdrops-edit.jpg');
+
 }

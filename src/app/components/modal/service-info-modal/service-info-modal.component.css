@@ -1,0 +1,49 @@
+#service-modal {
+    padding: 50px;
+    box-shadow: 15px;
+    border-radius: 25px;
+    background-color: white;
+    font-size: 25px;
+    font-weight: 900;
+    align-content: center;
+    width: 687.664px !important;
+    height: 425px !important;
+    overflow-y: scroll;
+}
+
+.service-modal-info {
+    overflow: visible;
+}
+
+#info-heading-focus {
+    font-size: 25px;
+    text-decoration: underline;
+    display: inline;
+    width: 40%;
+}
+
+#services-info-heading {  
+    font-size: 25px;
+    font-weight: 900;  
+    align-content: inline;
+    display: inline;
+    width: 25%;
+    margin: 0px;
+}
+
+#services-info-body {  
+    font-size: 25px;
+    font-weight: 900;  
+    align-content: inline;
+    width: 75%;
+    margin: 0px;
+}
+
+#service-info-description {
+    overflow: visible !important;
+    display: inline;
+}
+
+#service-modal-close {
+    align-content: inline;
+}

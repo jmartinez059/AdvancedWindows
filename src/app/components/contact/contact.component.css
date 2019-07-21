@@ -1,0 +1,16 @@
+.contact-container {
+    display: flex;
+}
+
+.contact-owner-info {
+    display: inline-block;
+    border: 10px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: lightgrey;
+    opacity: .25;
+}
+
+.contact-owner-name {
+    font-size: 24px;
+}
