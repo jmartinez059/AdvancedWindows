@@ -4,19 +4,20 @@
 <h1>
   contact works!
 </h1>
-  <p-message
-    *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
-    severity="warn"
-    summary="Empty Subject"
-    text="There is no subject to send with this email">
-  </p-message> 
-  <p-messages *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
-      [(value)]="msgs">
-  </p-messages>
+<p-message
+  class=".ui-button-warn"
+  *ngIf="!bodyFormControl.valid && bodyFormControl.touched"
+  severity="warn"
+  summary="Empty Message"
+  text="There is no message to send with this email">
+</p-message> 
+<p-messages *ngIf="!subjectFormControl.valid && subjectFormControl.touched"
+    [(value)]="msgs">
+</p-messages>
 <div>
   <p-chips
-    class="p-chips-email"
-    class="ui-g-12"
+    class="p-chips-email form-control form-control.ng-touched.ng-invalid ui-g-12"
+    [formControl]="emailFormControl"
     [(ngModel)]="recipients"
     (onBlur)="onTabOut()"
     (onRemove)="removeRecipient($event.value)"
@@ -54,6 +55,7 @@
     Basic
   </h3>
   <input
+    class="form-control"
     id="input"
     type="text"
     size="30"
@@ -62,7 +64,7 @@
     [(ngModel)]="subjectFormControl.value">
   <div *ngFor="let recipient of recipients">
     <h1>{{recipient.name}}:{{recipient.email}}</h1><br>
-</div>
+  </div>
   <p 
     class="errorMessage"
     *ngIf="!subjectFormControl.valid && subjectFormControl.touched">Please add a subject</p>
@@ -71,14 +73,16 @@
 <h3>Custome Message</h3>
 <span class="ui-float-label">
     <textarea
+      class="custom-message-textarea"
       id="float-input"
       type="text"
       size="230"
       [rows]="6"
-      [formControl]="emailFormControl"
-      pInputText>    
+      [formControl]="bodyFormControl"
+      pInputText>
       <label class="optional-placeholder pad-bot5" for="type">Message</label>
       <label class="label-right optional-placeholder align-right">optional</label>
+    </textarea>
 </span>
 
 <h3>Disabled</h3>
@@ -86,12 +90,3 @@
 
 <button id="disabled-btn" type="button" (click)="toggleDisabled()" pButton label="Toggle"></button>
 
-
-    <textarea 
-      pInputTextarea      
-      (onBlur)="onTabOutTextarea()"
-      spellcheck="true on"
-      [rows]="6" >
-        <label class="optional-placeholder pad-bot5" for="type">Message</label>
-        <label class="label-right optional-placeholder align-right">optional</label>
-    </textarea>

@@ -33,7 +33,7 @@ export class MockData {
             'He grew up living the laid back San Diego lifestyle and now shares that life style ' +
             'with his wife Kelly and his son William. When he is not washing widows he is with ' +
             'his family riding bikes up and down the coast or spending the day at the beach. ' +
-            'Marcus has owned Advanced Window Washing for almost 20 years and hopes to continue ' + 
+            'Marcus has owned Advanced Window Washing for almost 20 years and hopes to continue ' +
             'to serve our communtiy for another 20!',
             'quote': 'Will work for beer!',
             'yearsWith': 18,

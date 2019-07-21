@@ -1,0 +1,17 @@
+.email-modal {
+    padding: 50px;
+    box-shadow: 15px;
+    border-radius: 25px;
+    background-color: white;
+    align-content: center;
+    width: 687.664px !important;
+    height: 425px !important;
+    overflow-y: scroll;
+    display: block;
+    margin: auto;
+}
+
+.email-modal-header {
+    font-size: 25px;
+    font-weight: 900;    
+}

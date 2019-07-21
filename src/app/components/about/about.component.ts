@@ -26,11 +26,6 @@ export class AboutComponent implements OnInit {
       this.employees = resp;
       console.log(this.employees);
     });
-  // this.employees = this.employeeService.getEmployeeInfo();
-  }
-
-  public getImageUrl(employee: EmployeeInfoCard): string {
-    return employee.image_url;
   }
 }
 

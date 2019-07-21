@@ -1,16 +1,68 @@
 .contact-container {
-    display: flex;
+    display: block;
+    padding-top: 1rem;
 }
 
-.contact-owner-info {
-    display: inline-block;
+.contact-info-container {
     border: 10px;
     border-color: black;
     border-radius: 5px;
-    background-color: lightgrey;
-    opacity: .25;
+    background-color: #0808fa2e;
+    width: 47rem;
+    height: auto;
+    box-shadow: 1px 2px 3px 2px;
+    margin-top: 5rem !important;
+    margin: auto;
+    padding: 2rem;
 }
 
-.contact-owner-name {
-    font-size: 24px;
+.contact-company {
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-address-phone {
+    font-size: 1.5rem;
+}
+
+.contact-info {
+    font-size: 2rem;
+    display: inline;
+}
+
+.contact-request {
+    padding: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.customer-input {
+    margin: auto;
+    border: 10px;
+    border-color: black;
+    border-radius: 5px;
+    background-color:white;
+    width: 42%;
+    height: auto;
+    box-shadow: 1px 2px 3px 2px;
+    padding: 2rem;
+}
+
+.customer-input-field {
+    display: block !important;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.contact-form-buttons {
+    text-align: end;
+}
+
+.customer-input-textarea {
+    resize: none;
 }

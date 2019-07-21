@@ -9,6 +9,7 @@ import { Message } from 'primeng/components/common/api';
 import { SelectItem } from 'primeng/components/common/api';
 import { headersToString } from 'selenium-webdriver/http';
 import { AlertMessage } from 'src/app/interfaces/AlertMessage';
+import { preserveWhitespacesDefault } from '@angular/compiler';
 
 export interface Recipient {
   name: string;
@@ -23,9 +24,11 @@ export interface Recipient {
 export class AppointmentComponent implements OnInit {
 
   public subject: string;
+  public body: string;
   public emailFormGroup: FormGroup;
   public subjectFormControl: FormControl;
   public emailFormControl: FormControl;
+  public bodyFormControl: FormControl;
   public recipient: Recipient;
   public recipients: Recipient[];
   public tabOut: boolean;
@@ -46,6 +49,7 @@ export class AppointmentComponent implements OnInit {
     this.tabOut = false;
     this.invalidSubject = true;
     this.subject = '';
+    this.body = '';
     this.text = '';
     this.recipient = { name: 'Jason Daniel Martinez', email: 'jason@me.com '};
     this.recipients = [this.recipient];
@@ -64,6 +68,12 @@ export class AppointmentComponent implements OnInit {
             Validators.required
           ]),
           updateOn: 'blur'
+      }
+    );
+    this.bodyFormControl = new FormControl('',
+      { validators:
+        Validators.required,
+        updateOn: 'blur'
       }
     );
   }
@@ -96,6 +106,14 @@ export class AppointmentComponent implements OnInit {
     }
     return initials;
   }
+
+  // public getBackgroundColor(): string {
+  //   if (!this.emailFormBuilder.valid && this.emailFormBuilder.touched) {
+  //     return 'white';
+  //   } else {
+  //     return 'f9020252';
+  //   }
+  // }
 
   public onTabOut() {
     console.log('onTabOut');

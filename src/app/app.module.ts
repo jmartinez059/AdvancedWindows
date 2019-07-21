@@ -10,7 +10,10 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ServiceInfoModalComponent } from './components/modal/service-info-modal/service-info-modal.component';
-import { MatDialogModule, MatInputModule, MatButtonModule, MatFormFieldModule, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogModule, MatInputModule,
+         MatCheckboxModule, MatButtonModule,
+         MatFormFieldModule, MAT_DIALOG_DATA
+        } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,8 +22,9 @@ import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { ButtonModule } from 'primeng/button';
+import { EmailModalComponent } from './components/modal/email-modal/email-modal.component';
+import { NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     AboutComponent,
     ModalComponent,
-    ServiceInfoModalComponent
+    ServiceInfoModalComponent,
+    EmailModalComponent
   ],
   imports: [
     BrowserModule,
@@ -47,10 +52,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MessagesModule,
     MessageModule,
-    HttpClientModule
+    HttpClientModule,
+    ButtonModule,
+    NoopAnimationsModule,
+    MatCheckboxModule
   ],
   providers: [
-    {provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true}},
+    { provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true} },
     MessageService,
     EmployeeService
   ],
