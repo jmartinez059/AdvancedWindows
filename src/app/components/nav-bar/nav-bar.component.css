@@ -10,6 +10,7 @@ ul {
     top: 0;
     right: 0;
     font-size: x-large;
+    z-index: 5;
 }
 
 ul li img {

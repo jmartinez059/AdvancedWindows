@@ -1,5 +1,7 @@
 .about-container {
     font-weight: bold;
+    padding-top: 2rem;
+    margin-top: 1rem;
 }
 
 .about-employee-info {

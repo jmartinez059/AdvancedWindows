@@ -1,10 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { EmployeeInfoCard } from 'src/app/interfaces/EmployeeInfoCard';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material';
 import { EmailModalComponent } from '../modal/email-modal/email-modal.component';
+import {MatInputModule} from '@angular/material/input';
+import {FormControl, Validators, NgForm} from '@angular/forms';
+
+interface NewContact {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-contact',
@@ -16,9 +26,11 @@ export class ContactComponent implements OnInit {
   public companyAddress: string;
   public companyPhoneNumber: string;
   public companyEmailAddress: string;
+  public newContact: NewContact;
 
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private changeDetectorRef: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -27,8 +39,8 @@ export class ContactComponent implements OnInit {
     this.companyEmailAddress = 'advanced.windows@aww.com';
   }
 
-  public openEmailModal() {
-    this.dialog.closeAll();
-    const dialogRef = this.dialog.open(EmailModalComponent);
+  public submitContactInfo(contactInfoForm: NgForm) {
+    console.log(contactInfoForm.valid);
+    console.log(contactInfoForm.value);
   }
 }
