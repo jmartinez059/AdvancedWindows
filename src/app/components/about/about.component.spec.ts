@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutComponent } from './about.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
-import { EmployeeService } from 'src/app/services/employee.service';
+import { EmployeeService } from 'src/app/services/employee/employee.service';
 import { MockData } from 'src/app/mock-data/mock-data';
 import { EmployeeInfoCard } from 'src/app/interfaces/EmployeeInfoCard';
 
@@ -53,7 +53,7 @@ fdescribe('AboutComponent', () => {
     it('should return an array of EmployeeInfoCard objects', () => {
       spyOn(mockEmployeeService, 'getEmployeeInfo').and.returnValue(mockEmployeeInfo);
       component.getEmployees();
-      expect(component.employees).toEqual(mockEmployeeInfo)
+      expect(component.employees).toEqual(mockEmployeeInfo);
     });
   });
 });

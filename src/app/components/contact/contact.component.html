@@ -14,8 +14,8 @@
       <div class="contact-info" (click)="openEmailModal()">{{companyEmailAddress}}</div>
     </div>
   </div>
-  <form class="contact-request" [ngFormOptions]="{updateOn: 'blur'}"
-    #contactInfoForm="ngForm" (ngSubmit)="submitContactInfo(contactInfoForm)" validate>
+  <form class="contact-request" *ngIf="!formSubmitted" [ngFormOptions]="{ updateOn: 'blur' }"
+    #contactInfoForm="ngForm" validate>
     <h1>If you would like to be contacted about our services, please leave your contact information below:</h1>
     <div class="customer-input">
       <mat-form-field>
@@ -40,9 +40,14 @@
           placeholder="Please leave a brief message and I will contact you as soon as possible. Thank you"></textarea>
       </mat-form-field>
       <div class="contact-form-buttons">
-        <button mat-button class="right-button mat-raised-button mat-secondary _mat-animation-noopable">Cancel</button>
-        <button mat-button class="right-button mat-raised-button mat-primary _mat-animation-noopable">Submit</button>
+        <button mat-button class="right-button mat-raised-button mat-secondary _mat-animation-noopable"
+          (click)="clearContactInfoForm(contactInfoForm)">Cancel</button>
+        <button mat-button class="right-button mat-raised-button mat-primary _mat-animation-noopable"
+          (click)="submitContactInfoForm(contactInfoForm)" (click)="contactInfoForm.reset()" >Submit</button>
       </div>
     </div>
   </form>
+  <div class="contact-request-submitted" *ngIf="formSubmitted">
+    <h1>Your contact information has been submitted. We will contact you as soon as we can.<br>Thank you!</h1>
+  </div>
 </div>

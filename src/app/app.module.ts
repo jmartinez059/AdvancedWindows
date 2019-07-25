@@ -20,11 +20,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
-import { EmployeeService } from './services/employee.service';
+import { EmployeeService } from './services/employee/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonModule } from 'primeng/button';
 import { EmailModalComponent } from './components/modal/email-modal/email-modal.component';
 import { NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { CustomerService } from './services/customer/customer.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { NoopAnimationsModule} from '@angular/platform-browser/animations';
   providers: [
     { provide: MAT_DIALOG_DATA, useValue: {hasBackdrop: true} },
     MessageService,
-    EmployeeService
+    EmployeeService,
+    CustomerService
   ],
   bootstrap: [
     AppComponent

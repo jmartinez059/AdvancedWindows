@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { EmployeeService } from 'src/app/services/employee.service';
+import { EmployeeService } from 'src/app/services/employee/employee.service';
 import { EmployeeInfoCard } from 'src/app/interfaces/EmployeeInfoCard';
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
@@ -7,14 +7,8 @@ import { MatDialog } from '@angular/material';
 import { EmailModalComponent } from '../modal/email-modal/email-modal.component';
 import {MatInputModule} from '@angular/material/input';
 import {FormControl, Validators, NgForm} from '@angular/forms';
-
-interface NewContact {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-}
+import { CustomerService } from 'src/app/services/customer/customer.service';
+import { NewCustomerContact } from 'src/app/interfaces/customer';
 
 @Component({
   selector: 'app-contact',
@@ -26,11 +20,13 @@ export class ContactComponent implements OnInit {
   public companyAddress: string;
   public companyPhoneNumber: string;
   public companyEmailAddress: string;
-  public newContact: NewContact;
+  public newContact: NewCustomerContact;
+  public formSubmitted = false;
 
   constructor(
     public dialog: MatDialog,
-    private changeDetectorRef: ChangeDetectorRef
+    private changeDetectorRef: ChangeDetectorRef,
+    private readonly customerService: CustomerService
   ) { }
 
   ngOnInit() {
@@ -39,8 +35,15 @@ export class ContactComponent implements OnInit {
     this.companyEmailAddress = 'advanced.windows@aww.com';
   }
 
-  public submitContactInfo(contactInfoForm: NgForm) {
-    console.log(contactInfoForm.valid);
-    console.log(contactInfoForm.value);
+  public submitContactInfoForm(contactInforForm: NgForm) {
+    if (contactInforForm.valid) {
+      this.newContact = contactInforForm.value;
+      this.formSubmitted = true;
+      this.customerService.postCustomerEmailInfo(this.newContact);
+    }
+  }
+
+  public clearContactInfoForm(contactInforForm: NgForm) {
+    contactInforForm.reset();
   }
 }
