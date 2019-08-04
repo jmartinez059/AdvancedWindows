@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
+  private readonly HOME = 'home';
+  private readonly SERVICES = 'services';
+  private readonly APPOINTMENT = 'appointment';
+  private readonly CONTACT = 'contact';
+  private readonly ABOUT = 'about';
+
   constructor(
     private router: Router
   ) { }
@@ -15,25 +21,38 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  public home() {
-    // TODO - make this navaigate to home
-    this.router.navigateByUrl('home');
-  }
-
-  public services() {
-    this.router.navigateByUrl('services');
-  }
-
-  public book() {
-    this.router.navigateByUrl('appointment');
-  }
-
-  public contact() {
-    this.router.navigateByUrl('contact');
-  }
-
-  public about() {
-    this.router.navigateByUrl('about');
+  public navTo(page: string) {
+    switch (page) {
+      case this.HOME: {
+        this.router.navigateByUrl(this.HOME);
+        document.documentElement.scrollTop = 0;
+        break;
+      }
+      case this.SERVICES: {
+        this.router.navigateByUrl(this.SERVICES);
+        document.documentElement.scrollTop = 0;
+        break;
+      }
+      case this.APPOINTMENT: {
+        this.router.navigateByUrl(this.APPOINTMENT);
+        document.documentElement.scrollTop = 0;
+        break;
+      }
+      case this.CONTACT: {
+        this.router.navigateByUrl(this.CONTACT);
+        document.documentElement.scrollTop = 0;
+        break;
+      }
+      case this.ABOUT: {
+        this.router.navigateByUrl(this.ABOUT);
+        document.documentElement.scrollTop = 0;
+        break;
+      }
+      default: {
+        this.router.navigateByUrl(this.HOME);
+        document.documentElement.scrollTop = 0;
+      }
+    }
   }
 
   public login() {

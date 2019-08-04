@@ -1,5 +1,5 @@
 #service-div {
-    padding: 125px 30px 30px 30px;
+    padding: 7rem 2rem;
 }
 
 #service-heading {
@@ -43,4 +43,9 @@
     text-align: center;
     font-size: 30px;
     font-weight: 900;    
+}
+
+.services-list-item {
+    margin: 1rem 11rem;
+    cursor: pointer;
 }
