@@ -35,3 +35,7 @@
 .appointment {
     display: inline;
 }
+
+.create-appointment-button:hover {
+    background-color: lightblue !important;    
+}

@@ -18,6 +18,7 @@ export class AppointmentComponent implements OnInit {
 
   public appointmentDate: Date;
   public scheduleForDaySelected: AWWAppoointment[];
+  public timeSlotAvailable = false;
 
   constructor(
     private readonly appointmentService: AppointmentService
@@ -31,5 +32,21 @@ export class AppointmentComponent implements OnInit {
     this.appointmentService.getScheduleForDay(dateSelected).subscribe(data => {
       this.scheduleForDaySelected = data;
     });
+    this.checkAvailabilityForDate(dateSelected);
+  }
+
+  public checkAvailabilityForDate(dateSelected: Date) {
+    const lastAppointment = this.scheduleForDaySelected[this.scheduleForDaySelected.length - 1];
+    const lastAppointmentStartTime = lastAppointment.startTime.split(' ')[0];
+    let lastAppointmentStartTimeHours = +lastAppointmentStartTime.split(':')[0];
+    if (lastAppointmentStartTimeHours < 5) {
+      lastAppointmentStartTimeHours += 12;
+    }
+    const lastAppointmentStartTimeMins = +lastAppointmentStartTime.split(':')[1];
+    const estimatedEndTime =
+      lastAppointmentStartTimeHours + lastAppointmentStartTimeMins / 60 + lastAppointment.durrationInMinutes / 60;
+     if (estimatedEndTime < 14) {
+       this.timeSlotAvailable = true;
+     }
   }
 }

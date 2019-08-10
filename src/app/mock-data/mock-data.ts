@@ -1,8 +1,9 @@
 import { Service } from '../types/service';
 import { EmployeeInfoCard } from '../interfaces/EmployeeInfoCard';
-import { AWWAppoointment } from '../interfaces/AWWAppoointment';
+import { AWWAppoointment, JobStatus } from '../interfaces/AWWAppoointment';
 
 export class MockData {
+
     public services: Service[] = [
         {
             'id': 0, 'name': 'Window Washing', 'description': 'At Advanced Window Washing we ' +
@@ -61,13 +62,15 @@ export class MockData {
             customerName: 'Customer One',
             startTime: '8:30 am',
             durrationInMinutes: 120,
-            location: 'La Jolla Shores'
+            location: 'La Jolla Shores',
+            status: JobStatus.APPROVED
         },
         {
             customerName: 'Customer One',
             startTime: '11:00 am',
-            durrationInMinutes: 210,
-            location: 'Encinitas - Neptune'
+            durrationInMinutes: 90,
+            location: 'Encinitas - Neptune',
+            status: JobStatus.APPROVED
         }
     ];
 }

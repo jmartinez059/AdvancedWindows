@@ -8,12 +8,20 @@
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field> 
-    <div class="schedule-for-date-selected"dateS *ngIf="scheduleForDaySelected">
+    <div class="schedule-for-date-selected" *ngIf="scheduleForDaySelected">
       <div clas="appointment" *ngFor="let appointment of scheduleForDaySelected">
         {{appointment.customerName}} - {{appointment.startTime}}
         <br>
         {{appointment.durrationInMinutes / 60}} hrs - {{appointment.location}}
+        <br>
+        Job Status: {{appointment.status}}
         <hr>
+        <div *ngIf="timeSlotAvailable">
+          <button mat-button class="create-appointment-button">Add Appointment</button>
+        </div>
+        <div *ngIf="!timeSlotAvailable">
+            We do not have any avialble time slots for this day
+          </div>
       </div>
     </div>
   </div>  
