@@ -17,7 +17,9 @@
         Job Status: {{appointment.status}}
         <hr>
         <div *ngIf="timeSlotAvailable">
-          <button mat-button class="create-appointment-button">Add Appointment</button>
+          <button mat-button class="create-appointment-button" (click)="addAppointment()">
+            Add Appointment
+          </button>
         </div>
         <div *ngIf="!timeSlotAvailable">
             We do not have any avialble time slots for this day

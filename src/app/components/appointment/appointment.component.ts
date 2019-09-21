@@ -49,4 +49,9 @@ export class AppointmentComponent implements OnInit {
        this.timeSlotAvailable = true;
      }
   }
+
+  public addAppointment() {
+    // todo: open add appointment modal
+    console.log('addAppointment() called on date', this.appointmentDate);
+  }
 }
