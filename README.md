@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - One - `hightlight`
 
-- Two
+- Two - [Link To Google](https://www.google.com).
 
 - Three
 
